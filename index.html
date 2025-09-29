@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masterchef Restaurant</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+
+  body {
+    color: white;
+    background: #111;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+  .logo {
+    color: #ffcc00;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  nav a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    color: #fff;
+  }
+
+  .kitchen {
+    height: 100vh;
+    background: url('https://t4.ftcdn.net/jpg/02/92/20/37/360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .kitchen::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+  }
+  .kitchen h1 {
+    position: relative;
+    font-size: 60px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .menu {
+    padding: 80px 20px;
+    text-align: center;
+    background: #222;
+  }
+  .menu h2 {
+    color: #ffcc00;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .dishes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  .dish {
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .dish:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255,204,0,0.5);
+  }
+  .dish img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .dish h3 {
+    color: #ffcc00;
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  .dish p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .signin {
+    padding: 80px 20px;
+    text-align: center;
+    background: #111;
+  }
+  .signin h2 {
+    color: #ffcc00;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  .signin input {
+    display: block;
+    width: 250px;
+    margin: 12px auto;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+  }
+  .signin button {
+    padding: 12px 25px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  .signin button:hover {
+    background: #e6b800;
+    transform: scale(1.05);
+  }
+
+  footer {
+    background-color: #333;
+    color: #e6b800;
+    padding: 15px;
+    text-align: center;
+  }
+
+  @media(max-width: 768px) {
+    .dishes {
+      flex-direction: column;
+      align-items: center;
+    }
+    .kitchen h1 {
+      font-size: 40px;
+      padding: 0 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍴 Masterchef</div>
+  <nav>
+    <a href="#kitchen">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#signin">Sign In</a>
+  </nav>
+</header>
+
+<section class="kitchen" id="kitchen">
+  <h1>Welcome to Masterchef</h1>
+</section>
+
+<section class="menu" id="menu">
+  <h2>Our Menu</h2>
+  <div class="dishes">
+    <div class="dish">
+      <img src="https://t0.gstatic.com/images?q=tbn:ANd9GcT1-FIvPJLY-7TkqNqVItATpEVl-um3H2ZUfmXvmMZdc3-Mfj3m" alt="Dhokla">
+      <h3>Dhokla</h3>
+      <p>₹110</p>
+    </div>
+    <div class="dish">
+      <img src="https://t3.gstatic.com/images?q=tbn:ANd9GcQLI-mvMUzYydF-RVdS-FR90J2kQHeNw1H93oNAZF1j2avLr2CS" alt="Biriyani">
+      <h3>Biriyani</h3>
+      <p>₹100</p>
+    </div>
+    <div class="dish">
+      <img src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/a3-1715746262202.jpg" alt="Samosa">
+      <h3>Samosa</h3>
+      <p>₹30</p>
+    </div>
+    <div class="dish">
+      <img src="https://www.bitesbee.com/wp-content/uploads/2021/09/Falooda.jpg" alt="Falooda">
+      <h3>Falooda</h3>
+      <p>₹50</p>
+    </div>
+    <div class="dish">
+      <img src="https://www.bitesbee.com/wp-content/uploads/2021/09/Chole-Bhature.jpg" alt="Chole">
+      <h3>Chole</h3>
+      <p>₹90</p>
+    </div>
+  </div>
+</section>
+
+<section class="signin" id="signin">
+  <h2>Sign In</h2>
+  <form>
+    <input type="text" placeholder="Enter Username" required>
+    <input type="password" placeholder="Enter Password" required>
+    <button>Login</button>
+  </form>
+</section>
+
+<footer>
+  2025 Masterchef Restaurant &copy;
+</footer>
+
+</body>
+</html>
